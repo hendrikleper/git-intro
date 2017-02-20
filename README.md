@@ -16,11 +16,13 @@ Wanneer je meerdere files hebt met dezelfde inhoud, dan zal in de tree meerdere 
 
 ## Github
 
-[https://github.com/](Github) is de meest populaire hostingsite gebaseerd op git. Het is git met extra's in de vorm van een levendig sociaal webplatform. GitHub biedt zowel gratis als betaalde accounts voor opensourceprojecten. 
+[https://github.com/](Github) is de meest populaire webplatform gebaseerd op git. Na het aanmaken van een gratis of betalend account kunnen kan je er je projecten bewaren en delen met anderen. Straks meer hierover.
 
 ## Voor het hieronder echt van start gaat ...
-wil ik graag al enkele extra referenties meegeven voor 
+wil ik graag al enkele extra referenties meegeven voor:
+
 1. degenen die het graag kort houden met [https://rogerdudler.github.io/git-guide/index.nl.html](git - een simpele uitleg)
+
 2. degenen die het liever met de video's van [https://www.youtube.com/watch?v=BCQHnlnPusY](de wonderlijke Daniel Shiffman) doen. In de comments vindt je de links naar de volgende video's. Het zijn er 6!  
 
 ## Een eerste repository
@@ -46,12 +48,13 @@ Vooraleer we git specifieke commandos gaan gebruiken, zullen we even een korte o
 
 Door gebruik te maken van de `tab`-toets, kun je autocomplete triggeren op commando's of bestands en mapnamen. Typ een deel van het commando of een deel van het pad en druk op tab om automatisch aan te vullen. Zo kun je heel wat tijd besparen, en vermijd je bovendien typfouten.
 
+
 Je kan ook output van een commando wegschrijven naar een bestand, door gebruik te maken van het `>` karakter:
 
 * `ls > test.txt` zal de output van het ls commando wegschrijven in een bestand met de naam test.txt.
 * `echo "hello world" > hello.txt` zal de output van het echo commando (de tekst "hello world") wegschrijven in een bestand met de naam hello.txt.
 
-Dit zijn enkele basiscommando's die je als je broekzak moet kennen. Dit is niets git-specifiek! Je zal deze commando's ook gebruiken wanneer je later aan de slag gaat met nodejs en grunt.
+Dit zijn enkele basiscommando's die je als je broekzak moet kennen. Dit is niets git-specifiek! 
 
 ### Aanmaken van een nieuwe git-repository
 
@@ -62,7 +65,7 @@ Maak een nieuwe map aan en maak hiervan een git repository (opmerking: de dollar
 	$ mkdir project
 	$ cd project
 	$ git init
-	Initialized empty Git repository in /Users/wouter/Documents/project/.git/
+	Initialized empty Git repository in /Users/hendrikleper/Documents/project/.git/
 
 Het `git init` commando zal een verborgen map  met de naam .git aanmaken. Hierin zit alle informatie over de repository & z'n historiek.
 
@@ -80,7 +83,7 @@ Via het `git status` commando kun je wat meer informatie opvragen over de huidig
 Maak een nieuw bestand hello.txt aan met de tekst "hello world":
 
 	$ echo "hello world" > hello.txt
-
+     
 Voer opnieuw het `git status` commando uit:
 
 	$ git status
@@ -119,9 +122,9 @@ Nu is git op de hoogte van die file. Dit wil nog niet zeggen dat git automatisch
 
 ### Bestanden wijzigen
 
-Pas de inhoud van het bestand aan naar "hello devine", en voer het git status commando uit:
+Pas de inhoud van het bestand aan naar "hello dear all", en voer het git status commando uit:
 
-	$ echo "hello devine" > hello.txt
+	$ echo "hello dear all" > hello.txt
 	$ git status
 	# On branch master
 	# Changes not staged for commit:
@@ -138,8 +141,8 @@ Git heeft gedetecteerd dat er wijzigingen zijn gebeurd aan een reeds getracked b
 
 Commit vervolgens deze wijzigingen:
 
-	$ git commit -m "world gewijzigd naar devine"
-	[master bd4b500] world gewijzigd naar devine
+	$ git commit -m "world gewijzigd naar dear all"
+	[master bd4b500] world gewijzigd naar dear all
 	 1 file changed, 1 insertion(+), 1 deletion(-)
 
 Je kan natuurlijk ook meerdere wijzigingen in 1x adden en committen. Pas de tekst aan, en maak een tweede file aan:
@@ -197,9 +200,9 @@ In elk van deze scenario's kun je wijzigingen ongedaan maken door de juiste git 
 
 ### Wijzigingen vóór staging ongedaan maken
 
-Pas de tekst in hello.txt opnieuw aan naar "hello devine", maar add deze nog niet:
+Pas de tekst in hello.txt opnieuw aan naar "hello kask", maar add deze nog niet:
 
-	$ echo "hello devine" > hello.txt
+	$ echo "hello kask" > hello.txt
 
 Voer een git status uit, git heeft changes gedetecteerd die nog niet staged for commit zijn:
 
@@ -227,9 +230,9 @@ De wijzigingen aan hello.txt zijn ongedaan gemaakt. Als je de inhoud van de file
 
 ### Wijzigingen na staging ongedaan maken
 
-Pas de tekst opnieuw aan naar "hello devine", stage deze wijzigingen via het add commando, maar commit deze nog niet:
+Pas de tekst opnieuw aan naar "hello kask", stage deze wijzigingen via het add commando, maar commit deze nog niet:
 
-	$ echo "hello devine" > hello.txt
+	$ echo "hello kask" > hello.txt
 	$ git add hello.txt
 	$ git status
 	# On branch master
@@ -265,7 +268,7 @@ Je kunt deze nu definitief ongedaan maken, door - net zoals in voorgaande topic 
 
 Stel: je hebt bepaalde wijzigingen gecommit, maar om een of andere reden wil je die ongedaan maken.
 
-	$ echo "hello devine" > hello.txt
+	$ echo "hello kask" > hello.txt
 	$ git add hello.txt
 	$ git commit -m "changed, but not sure about it"
 
@@ -290,7 +293,7 @@ Je kan trouwens de commit historiek van een repository bekijken via het `git log
 
 	$ git log
 	commit ad78401ab771bea7425e08b9dc1a68fd96fb5bbf
-	Author: Wouter Verweirder <wouter@aboutme.be>
+	Author: hendrikleper <hendrikleper@aboutme.be>
 	Date:   Wed Nov 6 09:53:16 2013 +0100
 
 	    Revert "changed, but not sure about it"
@@ -298,25 +301,25 @@ Je kan trouwens de commit historiek van een repository bekijken via het `git log
 	    This reverts commit f7e3f95692171c5c6dd6a9314f3acfc7354c3559.
 
 	commit f7e3f95692171c5c6dd6a9314f3acfc7354c3559
-	Author: Wouter Verweirder <wouter@aboutme.be>
+	Author: hendrikleper <hendrikleper@aboutme.be>
 	Date:   Wed Nov 6 09:42:31 2013 +0100
 
 	    changed, but not sure about it
 
 	commit a528ba56e7da390e37e28b1c9af938ba84f82c10
-	Author: Wouter Verweirder <wouter@aboutme.be>
+	Author: hendrikleper <hendrikleper@aboutme.be>
 	Date:   Tue Nov 5 17:41:41 2013 +0100
 
 	    welcome cp3 + new world file
 
 	commit bd4b50051584138951ff43c332fffb5d1161d287
-	Author: Wouter Verweirder <wouter@aboutme.be>
+	Author: hendrikleper <hendrikleper@aboutme.be>
 	Date:   Tue Nov 5 12:06:28 2013 +0100
 
-	    world gewijzigd naar devine
+	    world gewijzigd naar kask
 
 	commit 860a90914f97666fd0020713b564467ca89b749d
-	Author: Wouter Verweirder <wouter@aboutme.be>
+	Author: hendrikleper <hendrikleper@aboutme.be>
 	Date:   Tue Nov 5 11:45:20 2013 +0100
 
 	    eerste commit
@@ -334,19 +337,19 @@ Wanneer je nu opnieuw git log uitvoert, zie je dat de commits na a528 verdwenen 
 
 	$ git log
 	commit a528ba56e7da390e37e28b1c9af938ba84f82c10
-	Author: Wouter Verweirder <wouter@aboutme.be>
+	Author: hendrikleper <hendrikleper@aboutme.be>
 	Date:   Tue Nov 5 17:41:41 2013 +0100
 
 	    welcome cp3 + new world file
 
 	commit bd4b50051584138951ff43c332fffb5d1161d287
-	Author: Wouter Verweirder <wouter@aboutme.be>
+	Author: hendrikleper <hendrikleper@aboutme.be>
 	Date:   Tue Nov 5 12:06:28 2013 +0100
 
-	    world gewijzigd naar devine
+	    world gewijzigd naar kask
 
 	commit 860a90914f97666fd0020713b564467ca89b749d
-	Author: Wouter Verweirder <wouter@aboutme.be>
+	Author: hendrikleper <hendrikleper@aboutme.be>
 	Date:   Tue Nov 5 11:45:20 2013 +0100
 
 	    eerste commit
@@ -357,7 +360,7 @@ Zo'n `git reset` commando ga je enkel gebruiken om lokale commits ongedaan te ma
 
 Tot nu toe hebben we lokaal gewerkt met git. Je kan ook met meerdere mensen samenwerken aan 1 repository door te werken met een remote server. Iedereen heeft een lokale kopie van de repository staan, en kan zijn wijzigingen via een remote server gaan synchronizeren met andere mensen die de repository hebben staan.
 
-In principe kan je elke computer waarop je de git command tools hebt geïnstalleerd gebruiken als server. Het is dan alleen niet zo praktisch om samen te werken van thuisuit, je moet er dan voor zorgen dat je computer extern bereikbaar is en iedereen die samenwerkt moet dan je ip adres of hostname weten.
+In principe kan je elke computer waarop je de git command tools hebt geïnstalleerd gebruiken als server. Het is dan alleen niet zo praktisch om samen te werken van thuis, je moet er dan voor zorgen dat je computer extern bereikbaar is en iedereen die samenwerkt moet dan je ip adres of hostname weten.
 
 Daarom maken we gebruik van een hosted git omgeving. Hier zijn meerdere opties voor, wij zullen gebruik maken van GitHub.
 
@@ -382,14 +385,14 @@ Login op je GitHub account, en klik op de "New repository" button. Kies een naam
 
 Open een terminal venster en navigeer via cd commandos naar de map van de git repository met de hello world files. We zullen er voor zorgen dat we onze lokale repository via GitHub kunnen synchronizeren, door een "remote" te adden. Een remote is een lokatie waarmee je een git repository kan synchronizeren:
 
-	$ git remote add origin https://github.com/devinehowest/git-demo
+	$ git remote add origin https://github.com/hendrikleper/git-demo
 	$ git push -u origin master
 	Counting objects: 10, done.
 	Delta compression using up to 8 threads.
 	Compressing objects: 100% (4/4), done.
 	Writing objects: 100% (10/10), 742 bytes, done.
 	Total 10 (delta 0), reused 0 (delta 0)
-	To https://github.com/devinehowest/git-demo
+	To https://github.com/hendrikleper/git-demo
 	 * [new branch]      master -> master
 	Branch master set up to track remote branch master from origin.
 
@@ -431,7 +434,7 @@ Doe een `git push` om je commits op GitHub te plaatsen:
 	Compressing objects: 100% (3/3), done.
 	Writing objects: 100% (5/5), 506 bytes, done.
 	Total 5 (delta 0), reused 0 (delta 0)
-	To https://github.com/devinehowest/git-demo
+	To https://github.com/hendrikleper/git-demo
 	   a528ba5..9ed12bf  master -> master
 
 Wanneer je de repository via je browser bekijkt, zal je zien dat de inhoud van de README.md file, getoond wordt onder de lijst van files. Dit is een bestand in het MarkDown formaat. Markdown is een eenvoudige markup taal om documenten op te maken. Meer informatie hierover kan je onder andere vinden op wikipedia: [http://en.wikipedia.org/wiki/Markdown](http://en.wikipedia.org/wiki/Markdown).
@@ -446,7 +449,7 @@ Open een tweede terminal venster, navigeer naar de bovenliggende map van je orig
 
 Voer het git clone commando uit, om de online repository binnen te halen:
 
-	$ git clone https://github.com/devinehowest/git-demo project2
+	$ git clone https://github.com/hendrikleper/git-demo project2
 	Cloning into 'project2'...
 	remote: Counting objects: 15, done.
 	remote: Compressing objects: 100% (7/7), done.
@@ -473,7 +476,7 @@ In map 1 maken we een nieuw bestand project.txt aan, we adden, committen en push
 	Compressing objects: 100% (2/2), done.
 	Writing objects: 100% (3/3), 335 bytes, done.
 	Total 3 (delta 0), reused 0 (delta 0)
-	To https://github.com/devinehowest/git-demo
+	To https://github.com/hendrikleper/git-demo
 	   9ed12bf..a93634a  master -> master
 
 In map 2 maken we een nieuw bestand project2.txt aan, doen we een add & commit en projecten we te pushen naar de remote:
@@ -485,9 +488,9 @@ In map 2 maken we een nieuw bestand project2.txt aan, doen we een add & commit e
 	 1 file changed, 1 insertion(+)
 	 create mode 100644 project2.txt
 	project2$ git push
-	To https://github.com/devinehowest/git-demo
+	To https://github.com/hendrikleper/git-demo
 	 ! [rejected]        master -> master (non-fast-forward)
-	error: failed to push some refs to 'https://github.com/devinehowest/git-demo'
+	error: failed to push some refs to 'https://github.com/hendrikleper/git-demo'
 	hint: Updates were rejected because the tip of your current branch is behind
 	hint: its remote counterpart. Merge the remote changes (e.g. 'git pull')
 	hint: before pushing again.
@@ -503,7 +506,7 @@ We krijgen een vim editor te zien om een merge uit te voeren. Je kan hier een cu
 	remote: Compressing objects: 100% (2/2), done.
 	remote: Total 3 (delta 0), reused 3 (delta 0)
 	Unpacking objects: 100% (3/3), done.
-	From https://github.com/devinehowest/git-demo
+	From https://github.com/hendrikleper/git-demo
 	   9ed12bf..a93634a  master     -> origin/master
 	Merge made by the 'recursive' strategy.
 	 project.txt | 1 +
@@ -526,7 +529,7 @@ Doe opnieuw een push van die commits naar de remote. Het pushen lukt deze keer w
 	Compressing objects: 100% (4/4), done.
 	Writing objects: 100% (5/5), 546 bytes, done.
 	Total 5 (delta 2), reused 0 (delta 0)
-	To https://github.com/devinehowest/git-demo
+	To https://github.com/hendrikleper/git-demo
 	   a93634a..58096ca  master -> master
 
 Haal nu deze commits ook op in je eerste map via een `git pull` commando:
@@ -536,7 +539,7 @@ Haal nu deze commits ook op in je eerste map via een `git pull` commando:
 	remote: Compressing objects: 100% (2/2), done.
 	remote: Total 5 (delta 2), reused 5 (delta 2)
 	Unpacking objects: 100% (5/5), done.
-	From https://github.com/devinehowest/git-demo
+	From https://github.com/hendrikleper/git-demo
 	   a93634a..58096ca  master     -> origin/master
 	Updating a93634a..58096ca
 	Fast-forward
@@ -564,7 +567,7 @@ Doe een delete van project.txt in de project map:
 	Compressing objects: 100% (2/2), done.
 	Writing objects: 100% (2/2), 230 bytes, done.
 	Total 2 (delta 1), reused 0 (delta 0)
-	To https://github.com/devinehowest/git-demo
+	To https://github.com/hendrikleper/git-demo
 	   58096ca..59bfb66  master -> master
 
 Doe daarna een delete van project2.txt in de project2 map. We zullen ook hier eerst een pull moeten doen voordat we kunnen pushen. Het verschil bij de pull is dat we een rebase flag meegeven, om ervoor te zorgen dat eerst alle commits van de remote repository uitgevoerd worden, en daarna onze eigen commits:
@@ -580,7 +583,7 @@ Doe daarna een delete van project2.txt in de project2 map. We zullen ook hier ee
 	remote: Compressing objects: 100% (1/1), done.
 	remote: Total 2 (delta 1), reused 2 (delta 1)
 	Unpacking objects: 100% (2/2), done.
-	From https://github.com/devinehowest/git-demo
+	From https://github.com/hendrikleper/git-demo
 	   58096ca..59bfb66  master     -> origin/master
 	First, rewinding head to replay your work on top of it...
 	Applying: removed project2.txt
@@ -612,7 +615,7 @@ Pas in de project map de tekst aan in hello.txt en push deze naar de remote repo
 	Compressing objects: 100% (2/2), done.
 	Writing objects: 100% (3/3), 303 bytes, done.
 	Total 3 (delta 0), reused 0 (delta 0)
-	To https://github.com/devinehowest/git-demo
+	To https://github.com/hendrikleper/git-demo
 	   487257a..7f3b200  master -> master
 
 Pas nu ook in de project2 map de tekst in dezelfde file aan en probeer te pushen:
@@ -623,9 +626,9 @@ Pas nu ook in de project2 map de tekst in dezelfde file aan en probeer te pushen
 	[master 599d7b0] changed hello.txt in project2
 	 1 file changed, 1 insertion(+), 1 deletion(-)
 	project2$ git push
-	To https://github.com/devinehowest/git-demo
+	To https://github.com/hendrikleper/git-demo
 	 ! [rejected]        master -> master (non-fast-forward)
-	error: failed to push some refs to 'https://github.com/devinehowest/git-demo'
+	error: failed to push some refs to 'https://github.com/hendrikleper/git-demo'
 	hint: Updates were rejected because the tip of your current branch is behind
 	hint: its remote counterpart. Merge the remote changes (e.g. 'git pull')
 	hint: before pushing again.
@@ -638,7 +641,7 @@ We moeten eerst nog pullen, voor we kunnen pushen:
 	remote: Compressing objects: 100% (2/2), done.
 	remote: Total 3 (delta 0), reused 3 (delta 0)
 	Unpacking objects: 100% (3/3), done.
-	From https://github.com/devinehowest/git-demo
+	From https://github.com/hendrikleper/git-demo
 	   487257a..7f3b200  master     -> origin/master
 	First, rewinding head to replay your work on top of it...
 	Applying: changed hello.txt in project2
@@ -650,7 +653,7 @@ We moeten eerst nog pullen, voor we kunnen pushen:
 	Failed to merge in the changes.
 	Patch failed at 0001 changed hello.txt in project2
 	The copy of the patch that failed is found in:
-	   /Users/wouter/Documents/project2/.git/rebase-apply/patch
+	   /Users/hendrikleper/Documents/project2/.git/rebase-apply/patch
 
 	When you have resolved this problem, run "git rebase --continue".
 	If you prefer to skip this patch, run "git rebase --skip" instead.
@@ -712,7 +715,7 @@ Nu kan je opnieuw pushen naar de remote:
 	Compressing objects: 100% (2/2), done.
 	Writing objects: 100% (3/3), 326 bytes, done.
 	Total 3 (delta 0), reused 0 (delta 0)
-	To https://github.com/devinehowest/git-demo
+	To https://github.com/hendrikleper/git-demo
 	   7f3b200..920c81f  master -> master
 
 Doe een `git pull` in de andere map, zodat beide mappen terug in sync zijn.
@@ -725,7 +728,7 @@ Als voorbeeld werken we met een webpack project. We zullen "per ongeluk" node_mo
 ### Opzetten git repository
 Maak een nieuwe repository aan op GitHub en clone deze op jouw computer:
 
-	$ git clone https://github.com/devinehowest/git-demo.git
+	$ git clone https://github.com/hendrikleper/git-demo.git
 
 Maak daarna in deze map een werkend webpack project aan. Je kan uiteraard een kopie nemen van een vorig project en de dependencies installeren via `npm install` of `yarn`.
 
@@ -764,7 +767,7 @@ Commit & push deze wijzigingen naar GitHub
 	Compressing objects: 100% (2896/2896), done.
 	Writing objects: 100% (3373/3373), 4.38 MiB | 219.00 KiB/s, done.
 	Total 3373 (delta 447), reused 0 (delta 0)
-	To https://github.com/devinehowest/git-demo.git
+	To https://github.com/hendrikleper/git-demo.git
 	 * [new branch]      master -> master
 	Branch master set up to track remote branch master from origin.
 
@@ -823,7 +826,7 @@ Add, commit & push nu enkel deze deletes de remote, door de flag -u te gebruiken
 	Compressing objects: 100% (2/2), done.
 	Writing objects: 100% (2/2), 244 bytes | 0 bytes/s, done.
 	Total 2 (delta 1), reused 0 (delta 0)
-	To https://github.com/devinehowest/git-demo.git
+	To https://github.com/hendrikleper/git-demo.git
 	   0b95e12..62c973d  master -> master
 
 ### .gitignore
@@ -849,7 +852,7 @@ Add, commit & push naar GitHub:
 	Compressing objects: 100% (2/2), done.
 	Writing objects: 100% (3/3), 312 bytes | 0 bytes/s, done.
 	Total 3 (delta 1), reused 0 (delta 0)
-	To https://github.com/devinehowest/git-demo.git
+	To https://github.com/hendrikleper/git-demo.git
 	   62c973d..803c414  master -> master
 
 
@@ -858,7 +861,7 @@ Het is een goed idee om de volledige map nu te wissen, en de repository opnieuw 
 
 Wis dus de volledige map, en clone deze opnieuw:
 
-	$ git clone https://github.com/devinehowest/git-demo.git
+	$ git clone https://github.com/hendrikleper/git-demo.git
 
 Je zal zien dat de node_modules (en eventueel ook bower_components) niet in de map zitten. Installeer deze alle dependencies via `npm install` (of `yarn` indien je gebruik maakt van yarn).
 
@@ -870,4 +873,3 @@ Dit is een basis introductie om je op weg te helpen met git. Er is nog heel wat 
 * [https://www.atlassian.com/git/](https://www.atlassian.com/git/)
 * [https://help.github.com/](https://help.github.com/)
 * [http://git-scm.com/book](http://git-scm.com/book)
-* 
