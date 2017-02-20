@@ -2,27 +2,7 @@
 ## Over Git ##
 Git is een versiebeheersysteem. Het laat je onder andere toe om met meerdere mensen samen te werken aan projecten en een historiek van het project bij te houden.
 
-Het werd gelanceerd in april 2005 door Linus Torvalds - de vader van Linux. Codebeheersystemen waren niets nieuws, enkele belangrijke systemen in het verleden waren:
-
-* SCSS begin de jaren 70
-* RCS begin de jaren 80
-* CVS werd gelanceerd in 1986
-* SVN in 2001
-
-De Linux ontwikkeling gebeurde in de beginjaren met Bitkeeper VCS. In 2005 legde Bitkeeper echter enkele extra restricties op aan de gratis open source versie, waardoor Linux niet langer via dit systeem ontwikkeld kon worden. Linus zocht naar alternatieven, maar vond er geen die voldeden aan z'n eisen:
-
-* Eenvoudig aan distributed development doen
-* Scalable zijn: met meer dan 1000 ontwikkelaars samen kunnen werken
-* Snel & Efficient en betrouwbaar zijn
-* Weten wie wat gedaan heeft
-* Ondersteuning voor transacties: meerdere acties bundelen
-* Branching ondersteuning: afsplitsingen van het project die terug samengevoegd kunnen worden met het hoofdproject.
-* Distributed repositories: project met historiek wordt niet centraal bijgehouden.
-* Gratis
-
-Toen hij geen alternatief vond die aan deze requirements voldeed besloot hij z'n eigen systeem te ontwikkelen: GIT was geboren.
-
-De naam GIT is geen afkorting, maar een verwijzing naar Linus zelf: het is slang voor "een onaangenaam persoon". Net zoals Linux, wou hij een naam die naar zichzelf verwijst. Nadien is er door de community de afkorting "Global Information Tracker" op geplakt.
+Het werd gelanceerd in april 2005 door Linus Torvalds - de vader van Linux. De naam GIT is geen afkorting, maar een verwijzing naar Linus zelf: het is slang voor "een onaangenaam persoon". Net zoals Linux, wou hij een naam die naar zichzelf verwijst. Nadien is er door de community de afkorting "Global Information Tracker" op geplakt.
 
 ## Interne werking ##
 
@@ -34,11 +14,20 @@ Je bestanden worden opgeslaan in een repository. Deze repository bevat informati
 
 Wanneer je meerdere files hebt met dezelfde inhoud, dan zal in de tree meerdere keren verwezen worden naar hetzelfde blob object, waardoor er plaats bespaard wordt.
 
+## Github
+
+[https://github.com/](Github) is de meest populaire hostingsite gebaseerd op git. Het is git met extra's in de vorm van een levendig sociaal webplatform. GitHub biedt zowel gratis als betaalde accounts voor opensourceprojecten. 
+
+## Voor het hieronder echt van start gaat ...
+wil ik graag al enkele extra referenties meegeven voor 
+1. degenen die het graag kort houden met [https://rogerdudler.github.io/git-guide/index.nl.html](git - een simpele uitleg)
+2. degenen die het liever met de video's van [https://www.youtube.com/watch?v=BCQHnlnPusY](de wonderlijke Daniel Shiffman) doen. In de comments vindt je de links naar de volgende video's. Het zijn er 6!  
+
 ## Een eerste repository
 
-We zullen git gebruiken vanaf de command line. Er zijn wel enkele applicaties die toelaten om via een GUI git commando's uit te voeren, maar wanneer je meer geavanceerde acties wil uitvoeren zul je sowieso terug moeten grijpen naar de command line.
+We zullen git gebruiken vanaf de command line. Er zijn wel enkele applicaties die toelaten om via een [https://desktop.github.com/](GUI) git commando's uit te voeren, maar wanneer je meer geavanceerde acties wil uitvoeren zul je sowieso terug moeten grijpen naar de command line.
 
-Git wordt mee geïntalleerd wanneer je de xcode command line tools installeert. Indien je dit dus reeds gedaan hebt (bijvoorbeeld om nodejs te laten werken), dan kun je meteen aan de slag. Een andere optie (zonder de command line tools) is git downloaden en installeren van op [http://git-scm.com/downloads](http://git-scm.com/downloads).
+Git op Mac wordt mee geïntalleerd wanneer je de xcode command line tools installeert. Een andere optie (zonder de command line tools) is git downloaden en installeren van op [http://git-scm.com/downloads](http://git-scm.com/downloads). Dat is manier voor Windows en Linux.
 
 ### Werken in Terminal
 
@@ -881,3 +870,4 @@ Dit is een basis introductie om je op weg te helpen met git. Er is nog heel wat 
 * [https://www.atlassian.com/git/](https://www.atlassian.com/git/)
 * [https://help.github.com/](https://help.github.com/)
 * [http://git-scm.com/book](http://git-scm.com/book)
+* 
